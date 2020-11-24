@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include <QString>
+#include <QMessageBox>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class StartWindow; }
@@ -24,7 +25,7 @@ private:
 public slots:
     //! Обрабатывает подтверждение диалога.
     void accept() Q_DECL_OVERRIDE;
-    //! Обновляет значение имени игрока при изменении
+    //! Обновляет значение имени игрока при изменении проверка входных данных
     void setName(QString name);
     //! Обновляет значение противника игрока при изменении
     void setEnemy(int enemy);

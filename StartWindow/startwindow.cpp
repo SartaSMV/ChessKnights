@@ -18,10 +18,18 @@ StartWindow::~StartWindow()
     delete ui;
 }
 
-//! Обновляет значение имени игрока при изменении
+//! Обновляет значение имени игрока при изменении проверка входных данных
 void StartWindow::setName(QString name)
 {
-    *this->name = name;
+    if( name.contains(QRegularExpression("[^A-Za-z0-9]")) )
+    {
+        name.remove(QRegularExpression("[^A-Za-z0-9]"));
+        ui->lineEdit_Name->setText(name);
+    }
+    else
+    {
+        *this->name = name;
+    }
 }
 
 //! Обновляет значение противника игрока при изменении
@@ -41,8 +49,9 @@ void StartWindow::setEnemy(int enemy)
 
 void StartWindow::accept()
 {
-    if( name->contains(QRegularExpression("[^A-Za-z0-9]")) )
+    if(*enemy == 0 && name->isEmpty())
     {
+        QMessageBox::critical(this, tr("Warning"), "The name can not be empty!");
         return;
     }
     QDialog::accept();
