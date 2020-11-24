@@ -149,5 +149,41 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>lineEdit_Name</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>StartWindow</receiver>
+   <slot>setName(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>190</x>
+     <y>18</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>149</x>
+     <y>49</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox_Enemy</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>StartWindow</receiver>
+   <slot>setEnemy(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>190</x>
+     <y>44</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>149</x>
+     <y>49</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
+ <slots>
+  <slot>setName(QString)</slot>
+  <slot>setEnemy(int)</slot>
+ </slots>
 </ui>
