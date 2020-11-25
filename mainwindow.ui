@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>917</width>
-    <height>586</height>
+    <width>758</width>
+    <height>589</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -22,8 +22,8 @@
      <widget class="QGraphicsView" name="graphicsView_chessboard">
       <property name="minimumSize">
        <size>
-        <width>527</width>
-        <height>527</height>
+        <width>530</width>
+        <height>530</height>
        </size>
       </property>
      </widget>
@@ -367,7 +367,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>917</width>
+     <width>758</width>
      <height>21</height>
     </rect>
    </property>
@@ -377,33 +377,25 @@
     </property>
     <addaction name="actionSave"/>
     <addaction name="actionLoad"/>
+    <addaction name="actionRating_board"/>
     <addaction name="actionExit"/>
    </widget>
-   <widget class="QMenu" name="menuHelp">
+   <widget class="QMenu" name="menuAbout">
     <property name="title">
-     <string>Help</string>
+     <string>About</string>
     </property>
+    <addaction name="actionHelp"/>
    </widget>
-   <widget class="QMenu" name="menuRating_board">
+   <widget class="QMenu" name="menuGames_utilites">
     <property name="title">
-     <string>Rating board</string>
+     <string>Games utilites</string>
     </property>
-   </widget>
-   <widget class="QMenu" name="menuUndo">
-    <property name="title">
-     <string>Undo</string>
-    </property>
-   </widget>
-   <widget class="QMenu" name="menuHint">
-    <property name="title">
-     <string>Hint(?)</string>
-    </property>
+    <addaction name="actionHide"/>
+    <addaction name="actionUndo"/>
    </widget>
    <addaction name="menuGame"/>
-   <addaction name="menuRating_board"/>
-   <addaction name="menuUndo"/>
-   <addaction name="menuHint"/>
-   <addaction name="menuHelp"/>
+   <addaction name="menuGames_utilites"/>
+   <addaction name="menuAbout"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionSave">
@@ -419,6 +411,26 @@
   <action name="actionExit">
    <property name="text">
     <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="text">
+    <string>Help</string>
+   </property>
+  </action>
+  <action name="actionRating_board">
+   <property name="text">
+    <string>Rating board</string>
+   </property>
+  </action>
+  <action name="actionHide">
+   <property name="text">
+    <string>Hide(?)</string>
+   </property>
+  </action>
+  <action name="actionUndo">
+   <property name="text">
+    <string>Undo</string>
    </property>
   </action>
  </widget>
@@ -440,8 +452,127 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>actionLoad</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>loadGame()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>378</x>
+     <y>294</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionSave</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>saveGame()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>378</x>
+     <y>294</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionRating_board</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>ratingBoard()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>276</x>
+     <y>43</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>378</x>
+     <y>294</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionHelp</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>help()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>91</x>
+     <y>24</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>378</x>
+     <y>294</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionUndo</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>undo()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>378</x>
+     <y>294</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionHide</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>hideForGame()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>378</x>
+     <y>294</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_Start_Finish</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>startFinishGame()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>646</x>
+     <y>530</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>378</x>
+     <y>294</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>exit()</slot>
+  <slot>loadGame()</slot>
+  <slot>saveGame()</slot>
+  <slot>ratingBoard()</slot>
+  <slot>help()</slot>
+  <slot>undo()</slot>
+  <slot>hideForGame()</slot>
+  <slot>startFinishGame()</slot>
  </slots>
 </ui>

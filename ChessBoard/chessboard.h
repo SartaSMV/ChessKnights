@@ -21,6 +21,7 @@ private:
     int countSquare;
     int sizeSquare;
     int sizeBoard;
+    int points[25][25];
 
     void mousePressEvent(QGraphicsSceneMouseEvent * event) Q_DECL_OVERRIDE;
 };

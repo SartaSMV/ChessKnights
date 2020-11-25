@@ -5,6 +5,7 @@
 
 #include <QMainWindow>
 #include <StartWindow/startwindow.h>
+#include <QTimer>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -19,11 +20,32 @@ public:
     ~MainWindow();
 
 public slots:
+    void refresh();
+
+    //! Загрузить сохраненную партию.
+    bool loadGame();
+    //! Сохранить текущую партию.
+    bool saveGame();
+    //! Выход из программы.
     void exit();
+
+    //! Отображает таблицу рекордов.
+    void ratingBoard();
+    //! Вызывает окно с инструкцией.
+    void help();
+
+    //! Подсказка для выгодного хода.
+    void hideForGame();
+    //! Игра возврощается на ход назад.
+    void undo();
+
+    //! Стартуе и заканчивает игру.
+    void startFinishGame();
 
 private:
     Ui::MainWindow *ui;
 
     ChessBoard *mChessBoard;
+    QTimer     *timer;
 };
 #endif // MAINWINDOW_H

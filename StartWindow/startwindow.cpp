@@ -10,7 +10,6 @@ StartWindow::StartWindow(QWidget *parent, QString* name, int *enemy)
 
     ui->setupUi(this);
     this->setWindowTitle("Start window");
-    emit this->ui->comboBox_Enemy->currentIndexChanged(0);
 }
 
 StartWindow::~StartWindow()
