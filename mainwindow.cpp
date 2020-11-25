@@ -20,3 +20,8 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+void MainWindow::exit()
+{
+   QApplication::instance()->quit();
+}

@@ -16,6 +16,9 @@ public:
     MainWindow(QWidget *parent = nullptr, bool *start = new bool(true));
     ~MainWindow();
 
+public slots:
+    void exit();
+
 private:
     Ui::MainWindow *ui;
 };
