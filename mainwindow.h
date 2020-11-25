@@ -1,6 +1,8 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include "ChessBoard/chessboard.h"
+
 #include <QMainWindow>
 #include <StartWindow/startwindow.h>
 
@@ -21,5 +23,7 @@ public slots:
 
 private:
     Ui::MainWindow *ui;
+
+    ChessBoard *mChessBoard;
 };
 #endif // MAINWINDOW_H

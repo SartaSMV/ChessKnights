@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>903</width>
-    <height>542</height>
+    <width>917</width>
+    <height>586</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,11 +19,11 @@
      <enum>QLayout::SetMinimumSize</enum>
     </property>
     <item>
-     <widget class="QGraphicsView" name="graphicsView">
+     <widget class="QGraphicsView" name="graphicsView_chessboard">
       <property name="minimumSize">
        <size>
-        <width>485</width>
-        <height>485</height>
+        <width>527</width>
+        <height>527</height>
        </size>
       </property>
      </widget>
@@ -367,7 +367,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>903</width>
+     <width>917</width>
      <height>21</height>
     </rect>
    </property>
