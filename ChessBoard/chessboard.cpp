@@ -37,7 +37,7 @@ void ChessBoard::setSizeBoard(int countSquare, int sizeSquare)
        {
            if (points[i][j])
            {
-               a = new Figure(sizeSquare, this);
+               a = new Prize(i+j, sizeSquare, this);
                a->setPos(i * (sizeSquare + 1) + 2, j * (sizeSquare + 1) + 2);
                this->addItem(a);
            }

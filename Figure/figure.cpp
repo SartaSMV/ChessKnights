@@ -20,6 +20,6 @@ void Figure::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QW
 {
     painter->setBrush(Qt::black);
     painter->drawEllipse(QRectF(0, 0, sizeSquare, sizeSquare));
-        Q_UNUSED(option);
-        Q_UNUSED(widget);
+    Q_UNUSED(option);
+    Q_UNUSED(widget);
 }

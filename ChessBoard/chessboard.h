@@ -2,6 +2,7 @@
 #define CHESSBOARD_H
 
 #include "Figure/figure.h"
+#include "Figure/prize.h"
 
 #include <QWidget>
 #include <QGraphicsView>

@@ -12,9 +12,10 @@ public:
     explicit Figure(int sizeSquare, QObject *parent = nullptr);
     ~Figure();
 
-private:
+protected:
     int sizeSquare;
 
+private:
     QRectF boundingRect() const Q_DECL_OVERRIDE;
     virtual void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) Q_DECL_OVERRIDE;
 };

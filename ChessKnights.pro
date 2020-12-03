@@ -18,6 +18,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     ChessBoard/chessboard.cpp \
     Figure/figure.cpp \
+    Figure/prize.cpp \
     StartWindow/startwindow.cpp \
     main.cpp \
     mainwindow.cpp
@@ -25,6 +26,7 @@ SOURCES += \
 HEADERS += \
     ChessBoard/chessboard.h \
     Figure/figure.h \
+    Figure/prize.h \
     StartWindow/startwindow.h \
     mainwindow.h
 
