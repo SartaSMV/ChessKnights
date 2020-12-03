@@ -1,6 +1,8 @@
 #ifndef CHESSBOARD_H
 #define CHESSBOARD_H
 
+#include "Figure/figure.h"
+
 #include <QWidget>
 #include <QGraphicsView>
 #include <QGraphicsScene>

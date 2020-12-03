@@ -4,8 +4,9 @@
 #include "ChessBoard/chessboard.h"
 
 #include <QMainWindow>
-#include <StartWindow/startwindow.h>
 #include <QTimer>
+
+#include <StartWindow/startwindow.h>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }

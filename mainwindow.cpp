@@ -93,6 +93,7 @@ void MainWindow::startFinishGame()
     {
         mChessBoard = new ChessBoard(this);
         ui->graphicsView_chessboard->setScene(mChessBoard);
+        ui->comboBox_Field_Size->setEnabled(false);
         timer->start(50);
         ui->pushButton_Start_Finish->setText("Finish");
     }
@@ -101,6 +102,7 @@ void MainWindow::startFinishGame()
         timer->stop();
         mChessBoard->clear();
         delete mChessBoard;
+        ui->comboBox_Field_Size->setEnabled(true);
         ui->pushButton_Start_Finish->setText("Start");
     }
 }

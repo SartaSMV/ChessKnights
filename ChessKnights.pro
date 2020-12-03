@@ -17,12 +17,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     ChessBoard/chessboard.cpp \
+    Figure/figure.cpp \
     StartWindow/startwindow.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
     ChessBoard/chessboard.h \
+    Figure/figure.h \
     StartWindow/startwindow.h \
     mainwindow.h
 

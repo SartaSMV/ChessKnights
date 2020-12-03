@@ -30,18 +30,16 @@ void ChessBoard::setSizeBoard(int countSquare, int sizeSquare)
         addLine(0,i,sizeBoard,i,QPen(Qt::black));
     }
 
+    Figure *a;
     for(int i = 0; i < countSquare; i++)
     {
        for(int j = 0; j < countSquare; j++)
        {
            if (points[i][j])
            {
-               addEllipse(    i * (sizeSquare + 1) + 2,
-                              j * (sizeSquare + 1) + 2,
-                              sizeSquare - 4,
-                              sizeSquare - 4,
-                              QPen(Qt::NoPen),
-                              QBrush(Qt::red));
+               a = new Figure(sizeSquare, this);
+               a->setPos(i * (sizeSquare + 1) + 2, j * (sizeSquare + 1) + 2);
+               this->addItem(a);
            }
        }
     }
