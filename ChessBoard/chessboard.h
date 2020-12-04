@@ -3,6 +3,7 @@
 
 #include "Figure/figure.h"
 #include "Figure/prize.h"
+#include "Figure/chessfigure.h"
 
 #include <QWidget>
 #include <QGraphicsView>
