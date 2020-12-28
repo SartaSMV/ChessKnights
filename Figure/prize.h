@@ -7,13 +7,16 @@ class Prize : public Figure
 {
     Q_OBJECT
 public:
-    explicit Prize(int value,int sizeSquare, QObject *parent = nullptr);
+    explicit Prize(int value, QObject *parent = nullptr);
     ~Prize();
 
+    //! Устанавливает ценность приза
     void setValue(int value);
+    //! Выводит ценность приза
     int getValue();
 
 private:
+    //! Ценность приза
     int value;
 
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) Q_DECL_OVERRIDE;

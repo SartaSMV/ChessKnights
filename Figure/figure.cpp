@@ -1,14 +1,20 @@
 #include "figure.h"
 
-Figure::Figure(int sizeSquare, QObject *parent)
+Figure::Figure(QObject *parent)
     : QObject(parent), QGraphicsItem()
 {
-    this->sizeSquare = sizeSquare - 4;
+
 }
 
 Figure::~Figure()
 {
 
+}
+
+//!Устанавливает размер фигуры
+void Figure::setSizeSquare(int sizeSquare)
+{
+    this->sizeSquare = sizeSquare - 4;
 }
 
 QRectF Figure::boundingRect() const
@@ -19,7 +25,8 @@ QRectF Figure::boundingRect() const
 void Figure::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
     painter->setBrush(Qt::black);
-    painter->drawEllipse(QRectF(0, 0, sizeSquare, sizeSquare));
+    painter->drawEllipse(QRectF(2, 2, sizeSquare, sizeSquare));
+
     Q_UNUSED(option);
     Q_UNUSED(widget);
 }

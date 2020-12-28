@@ -1,7 +1,7 @@
 #include "prize.h"
 
-Prize::Prize(int value, int sizeSquare, QObject *parent)
-    : Figure(sizeSquare, parent)
+Prize::Prize(int value, QObject *parent)
+    : Figure(parent)
 {
     this->value = value;
 }
@@ -11,11 +11,13 @@ Prize::~Prize()
 
 }
 
+//! Устанавливает ценность приза
 void Prize::setValue(int value)
 {
     this->value = value;
 }
 
+//! Выводит ценность приза
 int Prize::getValue()
 {
     return this->value;

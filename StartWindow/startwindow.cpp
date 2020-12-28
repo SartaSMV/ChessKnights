@@ -46,6 +46,7 @@ void StartWindow::setEnemy(int enemy)
     }
 }
 
+//! Обрабатывает подтверждение диалога.
 void StartWindow::accept()
 {
     if(*enemy == 0 && name->isEmpty())

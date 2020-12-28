@@ -2,17 +2,21 @@
 #define FIGURE_H
 
 #include <QObject>
-#include <QGraphicsItem>
 #include <QPainter>
+#include <QSet>
+#include <QGraphicsItem>
 
 class Figure : public QObject, public QGraphicsItem
 {
     Q_OBJECT
 public:
-    explicit Figure(int sizeSquare, QObject *parent = nullptr);
-    ~Figure();
+    explicit Figure(QObject *parent = nullptr);
+    virtual ~Figure();
 
+    //! Устанавливает размер фигуры
+    void setSizeSquare(int sizeSquare);
 protected:
+    //! Размер одной клетки поля
     int sizeSquare;
 
 private:

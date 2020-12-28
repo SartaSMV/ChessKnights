@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Resourse/ChessFigure/ChessKnight.svg</file>
+        <file>Resourse/ChessFigure/ChessRook.svg</file>
+        <file>Resourse/ChessFigure/ChessBishop.svg</file>
+    </qresource>
+</RCC>

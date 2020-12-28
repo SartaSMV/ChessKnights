@@ -18,9 +18,21 @@ public:
     ~StartWindow();
 
 private:
-    QString *name;
-    int *enemy;
+    /*!
+     * \brief Указатель на сгенерированный интерфейс.
+     *
+     * Указатель на объект UI-класса, сгенерированного на основе UI-файла
+     * mainwindow.ui.
+     *
+     * Через этот указатель можно обратиться к элементам главного окна,
+     * созданного в Qt Designer.
+     * \sa \ref faq_qt_designer_whatis
+     */
     Ui::StartWindow *ui;
+    //! Имя игрока
+    QString *name;
+    //! Сложность бота
+    int *enemy;
 
 public slots:
     //! Обрабатывает подтверждение диалога.

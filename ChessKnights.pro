@@ -1,4 +1,5 @@
 QT       += core gui
+QT       += svg
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -17,26 +18,56 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     ChessBoard/chessboard.cpp \
+    ChessPlayers/chessbot.cpp \
+    ChessPlayers/chessplayer.cpp \
+    ChessPlayers/chessuser.cpp \
+    Figure/chessbishop.cpp \
+    Figure/chessbishop.cpp \
     Figure/chessfigure.cpp \
+    Figure/chessfigure.cpp \
+    Figure/chessknight.cpp \
+    Figure/chessknight.cpp \
+    Figure/chessrook.cpp \
+    Figure/chessrook.cpp \
     Figure/figure.cpp \
+    Figure/figure.cpp \
+    Figure/prize.cpp \
     Figure/prize.cpp \
     StartWindow/startwindow.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    ratingboard.cpp
 
 HEADERS += \
     ChessBoard/chessboard.h \
+    ChessPlayers/chessbot.h \
+    ChessPlayers/chessplayer.h \
+    ChessPlayers/chessuser.h \
+    Figure/chessbishop.h \
+    Figure/chessbishop.h \
     Figure/chessfigure.h \
+    Figure/chessfigure.h \
+    Figure/chessknight.h \
+    Figure/chessknight.h \
+    Figure/chessrook.h \
+    Figure/chessrook.h \
+    Figure/figure.h \
     Figure/figure.h \
     Figure/prize.h \
+    Figure/prize.h \
     StartWindow/startwindow.h \
-    mainwindow.h
+    mainwindow.h \
+    ratingboard.h
 
 FORMS += \
     StartWindow/startwindow.ui \
-    mainwindow.ui
+    mainwindow.ui \
+    ratingboard.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    Resourse.qrc
